@@ -1,0 +1,26 @@
+{
+  "name": "tablesort-javascript",
+  "version": "1.0.0",
+  "description": "this is a table build in JS - sort data by click the arrow button",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "deploy": "rm -rf dist/ && npm run build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SzymonRojek/tableSort-JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SzymonRojek/tableSort-JavaScript/issues"
+  },
+  "homepage": "https://github.com/SzymonRojek/tableSort-JavaScript#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "gh-pages": "^3.2.3",
+    "parcel": "^2.5.0"
+  }
+}
