@@ -7,7 +7,7 @@ import {
 } from "../helpers";
 
 const row = [...document.querySelectorAll("tbody tr")];
-const toggleLink = document.querySelectorAll("[data-sortData]");
+const toggleLink = document.querySelectorAll("[data-sort]");
 
 const dataTable = getDataFromHtmlTable(row);
 const formattedData = addFormattedTimeToData(dataTable);
@@ -75,10 +75,10 @@ function renderSortedData(data) {
 
   return data.forEach(({ title, author, formattedTime }) => {
     return (tableBody.innerHTML += `
-      <tr class="animate-smoothChange odd:bg-white even:bg-slate-100">
-        <td class="border px-4 py-2">${title}</td>
-        <td class="border px-4 py-2">${author}</td>
-        <td class="border px-4 py-2">${formattedTime}</td>
+      <tr class="cursor-pointer animate-smoothChange odd:bg-white even:bg-slate-100 hover:bg-sky-700 hover:text-white transition ease-in-out delay-100">
+        <td class="border px-4 py-4">${title}</td>
+        <td class="border px-4 py-4">${author}</td>
+        <td class="border px-4 py-4">${formattedTime}</td>
       </tr>
   `);
   });
