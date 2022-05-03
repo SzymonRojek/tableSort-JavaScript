@@ -7,6 +7,11 @@
 <br>
 <br>
 
+<img src="./src/img/g.gif" width="350" height="400">
+
+<br>
+<br>
+
 ## Description:
 
 Sorting data in the table in ascdending and descending order.
@@ -20,9 +25,7 @@ Time in the third column is rendered in ascending order by default.
 - Vanilla JavaScript
 - Tailwind CSS
 
-<br>
-<br>
-<!-- 
+<!--
 <table>
   <tr>
     <td><img src="./src/img/npm-icon.png" width="50" height="50"></td>
