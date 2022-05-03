@@ -30,11 +30,11 @@ function init() {
 
       switch (index) {
         case 0:
-          return sortDataTitleHandler(event, direction);
+          return sortDataHandler(event, direction, "title");
         case 1:
-          return sortDataAuthorHandler(event, direction);
+          return sortDataHandler(event, direction, "author");
         case 2:
-          return sortDataTimeHandler(event, direction);
+          return sortDataHandler(event, direction, "formattedTime");
         default:
           break;
       }
@@ -42,29 +42,11 @@ function init() {
   });
 }
 
-function sortDataTitleHandler(_, direction) {
+function sortDataHandler(_, direction, property) {
   const sortedData =
     direction === "up"
-      ? getDescendingOrderData(formattedData, "title")
-      : getAscendingOrderData(formattedData, "title");
-
-  renderSortedData(sortedData);
-}
-
-function sortDataAuthorHandler(_, direction) {
-  const sortedData =
-    direction === "up"
-      ? getDescendingOrderData(formattedData, "author")
-      : getAscendingOrderData(formattedData, "author");
-
-  renderSortedData(sortedData);
-}
-
-function sortDataTimeHandler(_, direction) {
-  const sortedData =
-    direction === "up"
-      ? getDescendingOrderData(formattedData, "formattedTime")
-      : getAscendingOrderData(formattedData, "formattedTime");
+      ? getDescendingOrderData(formattedData, property)
+      : getAscendingOrderData(formattedData, property);
 
   renderSortedData(sortedData);
 }
