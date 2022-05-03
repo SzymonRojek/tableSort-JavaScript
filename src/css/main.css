@@ -1,15 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-table tbody tr {
-  transition: 0.4s all;
-}
-
-.link {
-  transition: 0.4s all;
-}
-
-.link:hover {
-  color: orange;
-}
