@@ -63,8 +63,8 @@ function sortDataAuthorHandler(_, direction) {
 function sortDataTimeHandler(_, direction) {
   const sortedData =
     direction === "up"
-      ? getDescendingOrderData(formattedData, "duration")
-      : getAscendingOrderData(formattedData, "duration");
+      ? getDescendingOrderData(formattedData, "formattedTime")
+      : getAscendingOrderData(formattedData, "formattedTime");
 
   renderSortedData(sortedData);
 }
