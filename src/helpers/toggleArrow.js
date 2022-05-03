@@ -1,4 +1,4 @@
-export default function toggleArrow(element) {
-  element.classList.toggle("fa-caret-up");
-  element.classList.toggle("fa-caret-down");
+export default function toggleArrow(event) {
+  event.target.firstChild.classList.toggle("fa-caret-up");
+  event.target.firstChild.classList.toggle("fa-caret-down");
 }
