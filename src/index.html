@@ -12,64 +12,67 @@
     <script type="module" src="js/main.js"></script>
   </head>
 
-  <body class="bg-gray-900 p-12 flex justify-center items-center h-screen">
-    <table class=" table-auto bg-white rounded-md overflow-hidden shadow-xl">
-      <thead class="heading">
-        <tr>
-          <th class="px-4 py-2">
-            <a class="link" href="#" data-sortData
-              ><i class="fas fa-caret-down"></i> Title</a
-            >
-          </th>
-          <th class="px-4 py-2">
-            <a class="link" href="#" data-sortData
-              ><i class="fas fa-caret-down"></i> Author</a
-            >
-          </th>
-          <th class="px-4 py-2">
-            <a class="link" href="#" data-sortData
-              ><i class="fas fa-caret-down"></i>Time Course</a
-            >
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="odd:bg-white even:bg-slate-100">
-          <td class="border px-4 py-2">Fundamentals of JavaScript</td>
-          <td class="border px-4 py-2">Adam</td>
-          <td class="border px-4 py-2">10129</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-slate-100">
-          <td class="border px-4 py-2">Browser - no secrets</td>
-          <td class="border px-4 py-2">Przemek</td>
-          <td class="border px-4 py-2">19393</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-slate-100">
-          <td class="border px-4 py-2">In the frameworks world</td>
-          <td class="border px-4 py-2">Marcin</td>
-          <td class="border px-4 py-2">14002</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-slate-100">
-          <td class="border px-4 py-2">Type Script - new web</td>
-          <td class="border px-4 py-2">Szymon</td>
-          <td class="border px-4 py-2">1000</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-slate-100">
-          <td class="border px-4 py-2">Tailwind and modern styles</td>
-          <td class="border px-4 py-2">Kamil</td>
-          <td class="border px-4 py-2">2000</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-slate-100">
-          <td class="border px-4 py-2">React - hooks vs custom hooks</td>
-          <td class="border px-4 py-2">Paula</td>
-          <td class="border px-4 py-2">1500</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-slate-100">
-          <td class="border px-4 py-2">Hoisting and loop event</td>
-          <td class="border px-4 py-2">Aleksandra</td>
-          <td class="border px-4 py-2">45600</td>
-        </tr>
-      </tbody>
-    </table>
+  <body class="bg-gray-900 p-12 flex justify-center flex-col items-center h-screen">
+      <header class="auto text-white p-12">
+        <h1 class="text-center text-4xl">Sort Table Rows on Click</h1> 
+      </header>
+        <table class="table-auto bg-white rounded-md overflow-hidden shadow-xl">
+          <thead class="bg-cyan-400 text-white">
+            <tr>
+              <th class="border p-4">
+                <a class="hover:text-sky-700 transition ease-in-out delay-100" href="#" data-sort
+                  ><i class="fas fa-caret-down px-2"></i> Title</a
+                >
+              </th>
+              <th class="border p-4">
+                <a class="hover:text-sky-700 transition ease-in-out delay-100" href="#" data-sort
+                  ><i class="fas fa-caret-down px-2"></i> Author</a
+                >
+              </th>
+              <th class="border p-4">
+                <a class="hover:text-sky-700 transition ease-in-out delay-100" href="#" data-sort
+                  ><i class="fas fa-caret-down px-2"></i>Time Course</a
+                >
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="odd:bg-white even:bg-slate-100">
+              <td class="border px-4 py-2">Fundamentals of JavaScript</td>
+              <td class="border px-4 py-2">Adam</td>
+              <td class="border px-4 py-2">10129</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-slate-100">
+              <td class="border px-4 py-2">Browser - no secrets</td>
+              <td class="border px-4 py-2">Przemek</td>
+              <td class="border px-4 py-2">19393</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-slate-100">
+              <td class="border px-4 py-2">In the frameworks world</td>
+              <td class="border px-4 py-2">Marcin</td>
+              <td class="border px-4 py-2">14002</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-slate-100">
+              <td class="border px-4 py-2">Type Script - new web</td>
+              <td class="border px-4 py-2">Szymon</td>
+              <td class="border px-4 py-2">1000</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-slate-100">
+              <td class="border px-4 py-2">Tailwind and modern styles</td>
+              <td class="border px-4 py-2">Kamil</td>
+              <td class="border px-4 py-2">2000</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-slate-100">
+              <td class="border px-4 py-2">React - hooks vs custom hooks</td>
+              <td class="border px-4 py-2">Paula</td>
+              <td class="border px-4 py-2">1500</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-slate-100">
+              <td class="border px-4 py-2">Hoisting and loop event</td>
+              <td class="border px-4 py-2">Aleksandra</td>
+              <td class="border px-4 py-2">45600</td>
+            </tr>
+          </tbody>
+        </table>
   </body>
 </html>
