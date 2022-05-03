@@ -1,5 +1,5 @@
 export default function getDataFromHtmlTable(rowTable) {
-  const newData = [];
+  const dataBodyTable = [];
 
   rowTable.forEach((_, i) => {
     const dataFromTable = {};
@@ -15,8 +15,8 @@ export default function getDataFromHtmlTable(rowTable) {
       dataFromTable[key] = cellText.textContent;
     });
 
-    newData.push(dataFromTable);
+    dataBodyTable.push(dataFromTable);
   });
 
-  return newData;
+  return dataBodyTable;
 }
