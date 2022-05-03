@@ -53,15 +53,17 @@ function sortDataHandler(_, direction, property) {
 
 function renderSortedData(data) {
   const tableBody = document.querySelector("tbody");
+
   tableBody.innerHTML = "";
 
-  return data.forEach(({ title, author, formattedTime }) => {
-    return (tableBody.innerHTML += `
+  return data.forEach(
+    ({ title, author, formattedTime }) =>
+      (tableBody.innerHTML += `
       <tr class="cursor-pointer animate-smoothChange odd:bg-white even:bg-slate-100 hover:bg-sky-700 hover:text-white transition ease-in-out delay-100">
         <td class="border px-4 py-4">${title}</td>
         <td class="border px-4 py-4">${author}</td>
         <td class="border px-4 py-4">${formattedTime}</td>
       </tr>
-  `);
-  });
+  `)
+  );
 }
