@@ -4,10 +4,10 @@ import {
   toggleArrow,
   getAscendingOrderData,
   getDescendingOrderData,
-} from "../helpers";
+} from "./helpers";
 
 const row = [...document.querySelectorAll("tbody tr")];
-const toggleLink = document.querySelectorAll("[data-sort]");
+const tableHead = document.querySelector("thead");
 
 const dataTable = getDataFromHtmlTable(row);
 const formattedData = addFormattedTimeToData(dataTable);
@@ -18,27 +18,20 @@ function init() {
   const sortedData = getAscendingOrderData(formattedData, "formattedTime");
   renderSortedData(sortedData);
 
-  toggleLink.forEach((link, index) => {
-    link.addEventListener("click", (event) => {
-      toggleArrow(event);
+  tableHead.addEventListener("click", (event) => {
+    toggleArrow(event);
 
-      const direction = event.target.firstChild.classList.contains(
-        "fa-caret-up"
-      )
-        ? "up"
-        : "down";
+    const direction = event.target.firstChild.classList.contains("fa-caret-up")
+      ? "up"
+      : "down";
 
-      switch (index) {
-        case 0:
-          return sortDataHandler(event, direction, "title");
-        case 1:
-          return sortDataHandler(event, direction, "author");
-        case 2:
-          return sortDataHandler(event, direction, "formattedTime");
-        default:
-          break;
-      }
-    });
+    if (event.target.matches("a")) {
+      sortDataHandler(
+        event,
+        direction,
+        event.target.attributes["data-sort"].value
+      );
+    }
   });
 }
 
