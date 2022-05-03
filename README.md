@@ -1,9 +1,5 @@
 # tableSort-JavaScript
 
-this is a table build in JS - sort data by click the arrow button
-
-# Bank Card Verification
-
 <br>
 
 ## 🎥 :arrow_right: [demo live](https://szymonrojek.github.io/tableSort-JavaScript/)
@@ -11,13 +7,18 @@ this is a table build in JS - sort data by click the arrow button
 <br>
 <br>
 
+## Description:
+
+Sorting data in the table in ascdending and descending order.
+
+Time in the third column is rendered in ascending order by default.
+
 ## I have used:
 
 ---
 
-<!-- - vanilla JavaScript
-- SCSS
-- BEM -->
+- Vanilla JavaScript
+- Tailwind CSS
 
 <br>
 <br>
