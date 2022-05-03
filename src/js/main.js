@@ -6,16 +6,16 @@ import {
   getDescendingOrderData,
 } from "./helpers";
 
-const row = [...document.querySelectorAll("tbody tr")];
 const tableHead = document.querySelector("thead");
+const tableRow = [...document.querySelectorAll("tbody tr")];
 
-const dataTable = getDataFromHtmlTable(row);
-const formattedData = addFormattedTimeToData(dataTable);
+const dataTable = getDataFromHtmlTable(tableRow);
+const formattedDataTable = addFormattedTimeToData(dataTable);
 
 init();
 
 function init() {
-  const sortedData = getAscendingOrderData(formattedData, "formattedTime");
+  const sortedData = getAscendingOrderData(formattedDataTable, "formattedTime");
   renderSortedData(sortedData);
 
   tableHead.addEventListener("click", (event) => {
@@ -38,8 +38,8 @@ function init() {
 function sortDataHandler(_, direction, property) {
   const sortedData =
     direction === "up"
-      ? getDescendingOrderData(formattedData, property)
-      : getAscendingOrderData(formattedData, property);
+      ? getDescendingOrderData(formattedDataTable, property)
+      : getAscendingOrderData(formattedDataTable, property);
 
   renderSortedData(sortedData);
 }
