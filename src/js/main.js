@@ -36,12 +36,12 @@ function init() {
 }
 
 function sortDataHandler(_, direction, property) {
-  const sortedData =
+  const sortedDataCell =
     direction === "up"
       ? getDescendingOrderData(formattedDataTable, property)
       : getAscendingOrderData(formattedDataTable, property);
 
-  renderSortedData(sortedData);
+  renderSortedData(sortedDataCell);
 }
 
 function renderSortedData(data) {
