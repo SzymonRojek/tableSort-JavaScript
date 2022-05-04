@@ -18,19 +18,15 @@ function init() {
   const sortedData = getAscendingOrderData(formattedDataTable, "formattedTime");
   renderSortedData(sortedData);
 
-  tableHead.addEventListener("click", (event) => {
-    toggleArrow(event);
+  tableHead.addEventListener("click", ({ target }) => {
+    toggleArrow(target);
 
-    const direction = event.target.firstChild.classList.contains("fa-caret-up")
+    const direction = target.firstChild.classList.contains("fa-caret-up")
       ? "up"
       : "down";
 
-    if (event.target.matches("a")) {
-      sortDataHandler(
-        event,
-        direction,
-        event.target.attributes["data-sort"].value
-      );
+    if (target.matches("a")) {
+      sortDataHandler(target, direction, target.attributes["data-sort"].value);
     }
   });
 }
